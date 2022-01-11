@@ -1,0 +1,20 @@
+<div class="container-fluid w-50 bgD">
+  <mat-card class="example-card bgU text-white">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ animaleSelezionato.nome }}</mat-card-title>
+      <mat-card-subtitle class="text-white">{{ animaleSelezionato.razza }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ animaleSelezionato.img }}"
+      alt="Immagine di {{ animaleSelezionato.razza }}"
+      class="img-fluide"
+    />
+    <mat-card-content>
+      <p>
+        <b>descrizione:</b> <br>{{ animaleSelezionato.descrizione }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

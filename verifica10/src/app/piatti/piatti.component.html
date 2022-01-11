@@ -1,0 +1,17 @@
+<mat-grid-list cols="2" class="bgD text-white" id="pi">
+    <div class="my-5 py-3">
+        <mat-grid-tile>
+            <div class="container float-start m-0">
+                <h1 class="my-3 text-center">Piatti</h1>
+                <ul class="list-group bgU">
+                    <li class="list-group-item list-group-item-action bgL text-white" *ngFor="let p of piatti" (click)="selectPiattoDetail(p)">
+                        <b>{{ p.titolo }}</b>
+                    </li>
+                </ul>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="my-2">
+            <app-piatti-detail [piattoSelezionato]="piattoSelezionato" *ngIf="openPiattoDetail"></app-piatti-detail>
+        </mat-grid-tile>
+    </div>
+</mat-grid-list>

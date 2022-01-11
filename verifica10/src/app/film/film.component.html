@@ -1,0 +1,22 @@
+<mat-grid-list cols="2" class="bgD text-white" id="fi">
+  <mat-grid-tile>
+    <div class="container float-start m-0">
+      <h1 class="my-3 text-center">Film</h1>
+      <ul class="list-group bgU">
+        <li
+          class="list-group-item list-group-item-action bgL text-white"
+          *ngFor="let f of film"
+          (click)="selectFilmDetail(f)"
+        >
+          {{ f.titolo }}
+        </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="my-3">
+    <app-film-detail
+      [filmSelezionato]="filmSelezionato"
+      *ngIf="openFilmDetail"
+    ></app-film-detail>
+  </mat-grid-tile>
+</mat-grid-list>

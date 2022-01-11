@@ -1,0 +1,1 @@
+per collegarsi alla app inserire nella barra di ricarca: http://127.0.0.1:4205

@@ -1,0 +1,20 @@
+<div class="container-fluid w-50 bgD">
+  <mat-card class="example-card bgU text-white">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ filmSelezionato.titolo }}</mat-card-title>
+      <mat-card-subtitle class="text-white">{{ filmSelezionato.genere }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ filmSelezionato.img }}"
+      alt="Immagine di {{ filmSelezionato.titolo }}"
+      class="img-fluide"
+    />
+    <mat-card-content>
+      <p>
+        <b>trama : </b><br>{{ filmSelezionato.descrizione }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

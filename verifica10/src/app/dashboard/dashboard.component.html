@@ -1,0 +1,23 @@
+<div fxLayout="row" class="container-fluid justify-content-center bgD">
+  <button
+    mat-raised-button
+    color="primary"
+    class="m-3 list-group-item-action btn1"
+    (click)="selectAnimali()"
+  >
+    Animali
+  </button>
+  <button mat-raised-button color="primary" class="m-3 list-group-item-action btn2" (click)="selectFilm()">
+    Film
+  </button>
+  <button mat-raised-button color="primary" class="m-3 list-group-item-action btn3" (click)="selectPiatto()">Piatti</button>
+</div>
+
+<div class="bgD anD my-5 py-5 text-center text-white" *ngIf="closeWelcome">
+  <h1 class="fontS my-5"><b>Benvenuto, questa è una lista di alcune cose che mi piacciono!</b></h1>
+  <p class="fontP">cliccando i bottoni ti comparira una lista,<br> di animali, di film e di piatti che adoro,<br> in base a quale bottone scegli,<br> <b>buona visita!</b></p>
+</div>
+
+<app-animali *ngIf="openAnimali" [@dissolvenzaA]></app-animali>
+<app-film *ngIf="openFilm" [@dissolvenzaF]></app-film>
+<app-piatti *ngIf="openPiatti" [@dissolvenzaP]></app-piatti>

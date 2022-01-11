@@ -1,0 +1,15 @@
+<div class="container-fluid w-50 h-25 text-center p-5 my-2 bgD">
+    <mat-card class="example-card my-1 bgU text-white">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ piattoSelezionato.titolo }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{ piattoSelezionato.img }}" alt="Immagine di {{ piattoSelezionato.titolo }}"
+            class="img-fluide" />
+        <mat-card-content>
+            <p>
+               <b>Ingredienti : </b> <br>{{ piattoSelezionato.ingredienti }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

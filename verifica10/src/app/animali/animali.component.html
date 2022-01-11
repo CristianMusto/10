@@ -1,0 +1,30 @@
+<!--
+<mat-selection-list #animali [multiple]="false">
+  <mat-list-option *ngFor="let animale of animali" [value]="animale">
+    {{ animale.id }}&#41; {{ animale.nome }}
+  </mat-list-option>
+</mat-selection-list>
+-->
+
+<mat-grid-list cols="2" class="bgD text-white" id="an">
+  <mat-grid-tile>
+    <div class="container float-start m-0 bgUL">
+      <h1 class="my-3 text-center">Animali</h1>
+      <ul class="list-group bgU">
+        <li
+          class="list-group-item bgL text-white"
+          *ngFor="let animale of animali"
+          (click)="selectAnimaliDetail(animale)"
+        >
+          {{ animale.nome }}
+        </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="my-3">
+    <app-animali-detail
+      [animaleSelezionato]="animaleSelezionato"
+      *ngIf="openAnimaliDetail"
+    ></app-animali-detail>
+  </mat-grid-tile>
+</mat-grid-list>

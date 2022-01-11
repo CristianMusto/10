@@ -1,0 +1,25 @@
+.bgD {
+    position: relative;
+    z-index: 1;
+}
+
+.bgU {
+    border-radius: 15px;
+    background: rgba(28, 28, 34, 0.8);
+    transition: all 0s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+
+.bgL {
+    background-color: transparent;
+
+}
+
+.bgL:hover {
+    background: linear-gradient(45deg,rgba(255, 102, 0, 0.5), rgba(55, 0, 255, 0.5)) !important;
+}
+
+.bgU:hover {
+    transform: scale(1.02);
+}
